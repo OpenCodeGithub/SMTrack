@@ -9,34 +9,22 @@ Save .json files under "./jsons/"
 
 ## Model Zoo
 Save weights files under "./weights/"
-  - [mot17_half.pth.tar](https://drive.google.com/file/d/1R-eMf5SgwmizMkOjqJq3ZiurWBNGYf1j/view?usp=drive_link)
-  - [mot17.pth.tar](https://drive.google.com/file/d/1MAb-Bhikx-fWe0VlJON_VMrYIyyyrt-F/view?usp=drive_link)
-  - [mot20_half.pth.tar](https://drive.google.com/file/d/1H1BxOfinONCSdQKnjGq0XlRxVUo_4M8o/view?usp=drive_link)
-  - [mot20.pth.tar](https://drive.google.com/file/d/1FunATdHrWfK95RiiEIw2GJ-gXB-tXMPB/view?usp=drive_link)
-  - [dance.pth.tar](https://drive.google.com/file/d/1ZKpYmFYCsRdXuOL60NRuc7VXAFYRskXB/view?usp=drive_link)
+
+--Checkpoints will be made publicly available soon.
 
 ## Run
 Detection results will be created under "../outputs/1. det/" as pickle files
 ```
-# For MOT17 validation
-python detect.py -f "exps/yolox_x_mot17_val.py" -c "weights/mot17_half.pth.tar" --nms 0.80 -n "../outputs/1. det/mot17_val_0.80.pickle" -b 1 -d 1 --fp16 --fuse
-python detect.py -f "exps/yolox_x_mot17_val.py" -c "weights/mot17_half.pth.tar" --nms 0.95 -n "../outputs/1. det/mot17_val_0.95.pickle" -b 1 -d 1 --fp16 --fuse
 
 # For MOT17 test
 python detect.py -f "exps/yolox_x_mot17_test.py" -c "weights/mot17.pth.tar" --nms 0.80 -n "../outputs/1. det/mot17_test_0.80.pickle" -b 1 -d 1 --fp16 --fuse
 python detect.py -f "exps/yolox_x_mot17_test.py" -c "weights/mot17.pth.tar" --nms 0.95 -n "../outputs/1. det/mot17_test_0.95.pickle" -b 1 -d 1 --fp16 --fuse
 
-# For MOT20 validation
-python detect.py -f "exps/yolox_x_mot20_val.py" -c "weights/mot20_half.pth.tar" --nms 0.80 -n "../outputs/1. det/mot20_val_0.80.pickle" -b 1 -d 1 --fp16 --fuse
-python detect.py -f "exps/yolox_x_mot20_val.py" -c "weights/mot20_half.pth.tar" --nms 0.95 -n "../outputs/1. det/mot20_val_0.95.pickle" -b 1 -d 1 --fp16 --fuse
 
 # For MOT20 test
 python detect.py -f "exps/yolox_x_mot20_test.py" -c "weights/mot20.pth.tar" --nms 0.80 -n "../outputs/1. det/mot20_test_0.80.pickle" -b 1 -d 1 --fp16 --fuse
 python detect.py -f "exps/yolox_x_mot20_test.py" -c "weights/mot20.pth.tar" --nms 0.95 -n "../outputs/1. det/mot20_test_0.95.pickle" -b 1 -d 1 --fp16 --fuse
 
-# For DanceTrack val
-python detect.py -f "exps/yolox_x_dance_val.py" -c "weights/dance.pth.tar" --nms 0.80 -n "../outputs/1. det/dance_val_0.80.pickle" -b 1 -d 1 --fp16 --fuse
-python detect.py -f "exps/yolox_x_dance_val.py" -c "weights/dance.pth.tar" --nms 0.95 -n "../outputs/1. det/dance_val_0.95.pickle" -b 1 -d 1 --fp16 --fuse
 
 # For DanceTrack test
 python detect.py -f "exps/yolox_x_dance_test.py" -c "weights/dance.pth.tar" --nms 0.80 -n "../outputs/1. det/dance_test_0.80.pickle" -b 1 -d 1 --fp16 --fuse

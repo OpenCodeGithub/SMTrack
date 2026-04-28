@@ -26,6 +26,13 @@ Developed in python3.8
 
 **2. Locate codes and datasets as below**
 ```
+-Train
+ -python run/mot20_train.sh
+ -python run/mot17_train.sh
+ -python run/dancetrack_train.sh
+ -python run/bee_train.sh
+
+
 - workspace
   - code
     - 1. YOLOX
